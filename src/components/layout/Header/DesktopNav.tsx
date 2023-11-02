@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-import { Navigation } from '../../types/Navigation';
+import { Navigation } from '@customTypes/Navigation';
 
 const DesktopNav = ({ links, currentPage }: Navigation) => {
   return (

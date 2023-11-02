@@ -2,10 +2,10 @@
 
 import { usePathname } from 'next/navigation';
 
-import useMediaQuery from 'components/hooks/useIsDesktop';
-import useToggle from 'components/hooks/useToggle';
+import { NavigationLink } from '@customTypes/Navigation';
+import useMediaQuery from '@hooks/useIsDesktop';
+import useToggle from '@hooks/useToggle';
 
-import { NavigationLink } from '../../types/Navigation';
 import DesktopNav from './DesktopNav';
 import MobileNav from './MobileNav';
 import Socials from './Socials';

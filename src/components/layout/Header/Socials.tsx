@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 import { GithubLogo, LinkedinLogo } from '@phosphor-icons/react';
 
-import { Social } from '../../types/Socials';
+import { Social } from '@customTypes/Socials';
 
 const socials: Social[] = [
   {
