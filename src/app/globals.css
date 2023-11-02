@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .link-mobile-active {
+    @apply bg-blue-200 font-bold border-l-[5px] border-blue-500;
+  }
+
+  .link-desktop-active {
+    @apply font-bold text-blue-500;
+  }
+}
