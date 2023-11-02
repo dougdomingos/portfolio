@@ -1,15 +1,12 @@
-import { GithubLogo, LinkedinLogo } from '@phosphor-icons/react';
 import Link from 'next/link';
+
+import { GithubLogo, LinkedinLogo } from '@phosphor-icons/react';
+
 import { Social } from '../../types/Socials';
 
 const socials: Social[] = [
   {
-    icon: (
-      <GithubLogo
-        size={32}
-        weight='fill'
-      />
-    ),
+    icon: <GithubLogo size={32} weight='fill' />,
     link: 'https://github.com/dougdomingos',
   },
   {
@@ -28,7 +25,9 @@ const Socials = () => (
   <div>
     <ul className='flex gap-4'>
       {socials.map((social) => (
-        <li key={social.link} className='transition-all hover:scale-125 ease-out'>
+        <li
+          key={social.link}
+          className='transition-all hover:scale-125 ease-out'>
           <Link href={social.link}>{social.icon}</Link>
         </li>
       ))}

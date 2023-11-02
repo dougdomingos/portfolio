@@ -1,7 +1,9 @@
 import { PropsWithChildren } from 'react';
-import ToggleButton from './ToggleButton';
+
 import { X } from '@phosphor-icons/react';
 import clsx from 'clsx';
+
+import ToggleButton from './ToggleButton';
 
 interface OverlayProps extends PropsWithChildren {
   visible: boolean;

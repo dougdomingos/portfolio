@@ -1,12 +1,13 @@
 'use client';
 
-import MobileNav from './MobileNav';
+import { usePathname } from 'next/navigation';
 
 import useMediaQuery from 'components/hooks/useIsDesktop';
 import useToggle from 'components/hooks/useToggle';
-import { usePathname } from 'next/navigation';
+
 import { NavigationLink } from '../../types/Navigation';
 import DesktopNav from './DesktopNav';
+import MobileNav from './MobileNav';
 import Socials from './Socials';
 
 const links: NavigationLink[] = [
@@ -23,7 +24,9 @@ const Header = () => {
   return (
     <header className='flex h-[70px] justify-center px-4'>
       <div className='flex h-full w-full max-w-[1200px] items-center justify-between'>
-        <span className='text-2xl font-bold first-letter:text-blue-500'>DOUG</span>
+        <span className='text-2xl font-bold first-letter:text-blue-500'>
+          DOUG
+        </span>
         {isMobile ? (
           <MobileNav
             visible={showNav}

@@ -4,7 +4,7 @@
 
 @layer components {
   .link-mobile-active {
-    @apply bg-blue-200 font-bold border-l-[5px] border-blue-500;
+    @apply border-l-[5px] border-blue-500 bg-blue-200 font-bold;
   }
 
   .link-desktop-active {

@@ -1,4 +1,5 @@
 import Link from 'next/link';
+
 import { Navigation } from '../../types/Navigation';
 
 const DesktopNav = ({ links, currentPage }: Navigation) => {

@@ -1,6 +1,8 @@
+import Link from 'next/link';
+
 import { List } from '@phosphor-icons/react';
 import clsx from 'clsx';
-import Link from 'next/link';
+
 import Overlay from '../../Overlay';
 import ToggleButton from '../../ToggleButton';
 import { Navigation } from '../../types/Navigation';
