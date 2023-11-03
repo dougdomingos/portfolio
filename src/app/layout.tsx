@@ -1,5 +1,6 @@
 import { Inter, Poppins } from 'next/font/google';
 
+import Footer from '@components/layout/Footer';
 import Header from '@components/layout/Header';
 import clsx from 'clsx';
 import type { Metadata } from 'next';
@@ -31,6 +32,7 @@ export default function RootLayout({
       <body className={clsx(inter.variable, poppins.variable, 'font-sans')}>
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
