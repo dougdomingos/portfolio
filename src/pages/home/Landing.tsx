@@ -1,7 +1,7 @@
 import Image from 'next/image';
 
 const Landing = () => (
-  <section className='flex flex-col lg:flex-row lg:justify-around gap-4 items-center py-12'>
+  <section className='flex flex-col lg:flex-row lg:justify-around gap-4 items-center'>
     <Image
       src={'https://avatars.githubusercontent.com/u/95258393?v=4'}
       alt='Profile picture'
