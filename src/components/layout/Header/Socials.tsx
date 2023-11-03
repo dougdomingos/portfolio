@@ -14,7 +14,7 @@ const socials: Social[] = [
       <LinkedinLogo
         size={32}
         weight='fill'
-        className='transition-colors hover:text-blue-500 hover:opacity-100 ease-out'
+        className='transition-colors hover:text-primary hover:opacity-100 ease-out'
       />
     ),
     link: 'https://linkedin.com/in/douglas-domingos',

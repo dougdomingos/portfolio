@@ -15,7 +15,7 @@ const Overlay = ({ visible, handleClose, children }: OverlayProps) => (
     role='menu'
     className={clsx(
       visible ? 'w-full' : 'w-0',
-      'fixed right-0 top-0 flex h-full flex-col justify-center overflow-hidden bg-white',
+      'fixed right-0 top-0 flex h-full flex-col justify-center overflow-hidden bg-white-900',
       'transition-all duration-500 ease-in-out',
     )}>
     <ToggleButton

@@ -1,11 +1,18 @@
-import { Inter } from 'next/font/google';
-
-import type { Metadata } from 'next';
+import { Inter, Poppins } from 'next/font/google';
 
 import Header from '@components/layout/Header';
+import clsx from 'clsx';
+import type { Metadata } from 'next';
+
 import './globals.css';
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
+
+const poppins = Poppins({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+  variable: '--font-poppins',
+});
 
 export const metadata: Metadata = {
   title: 'Douglas Domingos | Portfolio',
@@ -21,7 +28,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body className={inter.className}>
+      <body className={clsx(inter.variable, poppins.variable, 'font-sans')}>
         <Header />
         {children}
       </body>
