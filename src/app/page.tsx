@@ -1,9 +1,10 @@
 import Container from '@components/layout/PageContainer';
+import Home from '../pages/home';
 
-export default function Home() {
+export default function Homepage() {
   return (
     <Container>
-      <h1>Hello World!</h1>
+      <Home />
     </Container>
   );
 }
