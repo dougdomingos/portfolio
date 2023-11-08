@@ -9,6 +9,7 @@ import useToggle from '@hooks/useToggle';
 import DesktopNav from './DesktopNav';
 import MobileNav from './MobileNav';
 import Socials from './Socials';
+import Container from '../Container';
 
 const links: NavigationLink[] = [
   { url: '/', label: 'Home' },
@@ -23,22 +24,22 @@ const Header = () => {
 
   return (
     <header className='flex h-[70px] justify-center px-4'>
-      <div className='flex h-full w-full max-w-[1200px] items-center justify-between font-display'>
+      <Container className='flex h-full items-center justify-between font-display'>
         <span className='text-2xl font-bold first-letter:text-primary'>
           DOUG
         </span>
         {isMobile ? (
           <MobileNav
-            visible={showNav}
-            links={links}
-            currentPage={currentPage}
-            handleToggle={toggle}
+          visible={showNav}
+          links={links}
+          currentPage={currentPage}
+          handleToggle={toggle}
           />
-        ) : (
-          <DesktopNav currentPage={currentPage} links={links} />
-        )}
+          ) : (
+            <DesktopNav currentPage={currentPage} links={links} />
+            )}
         {!isMobile && <Socials />}
-      </div>
+      </Container>
     </header>
   );
 };
