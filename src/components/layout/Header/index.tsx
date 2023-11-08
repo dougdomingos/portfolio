@@ -19,7 +19,7 @@ const links: NavigationLink[] = [
 const Header = () => {
   const [showNav, toggle] = useToggle();
   const isMobile = useMediaQuery('(max-width: 768px)');
-  const currentPage = usePathname();
+  const currentPage = usePathname()!;
 
   return (
     <header className='flex h-[70px] justify-center px-4'>
