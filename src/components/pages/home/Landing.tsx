@@ -15,8 +15,9 @@ const Landing = () => (
         <span className='text-primary'>Douglas Domingos</span>
       </h1>
       <p className='text-xl lg:text-2xl max-w-[40ch]'>
-        Computer Science undergraduate at Federal University of Campina Grande,
-        who finds happiness in a cup of coffee and overcoming challenges
+        Software Developer and Computer Science student at Federal University of
+        Campina Grande, fueled by a relentless curiosity and a passion for
+        elegant code.
       </p>
     </div>
   </section>
