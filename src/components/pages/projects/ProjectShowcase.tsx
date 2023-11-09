@@ -24,7 +24,7 @@ const ProjectShowcase = () => {
       <ul className='flex flex-wrap justify-center gap-4'>
         {repositories.map((repo) => (
           <li key={repo.name}>
-            <Link href={repo.html_url}>
+            <Link href={repo.html_url} target='_blank'>
               <Card
                 name={repo.name}
                 description={repo.description}
