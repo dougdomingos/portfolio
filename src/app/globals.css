@@ -13,5 +13,5 @@
 }
 
 body {
-  @apply font-sans text-black-900 bg-white;
+  @apply bg-white font-sans text-black-900;
 }

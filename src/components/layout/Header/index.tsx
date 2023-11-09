@@ -6,10 +6,10 @@ import { NavigationLink } from '@customTypes/Navigation';
 import useMediaQuery from '@hooks/useIsDesktop';
 import useToggle from '@hooks/useToggle';
 
+import Container from '../Container';
 import DesktopNav from './DesktopNav';
 import MobileNav from './MobileNav';
 import Socials from './Socials';
-import Container from '../Container';
 
 const links: NavigationLink[] = [
   { url: '/', label: 'Home' },
@@ -30,14 +30,14 @@ const Header = () => {
         </span>
         {isMobile ? (
           <MobileNav
-          visible={showNav}
-          links={links}
-          currentPage={currentPage}
-          handleToggle={toggle}
+            visible={showNav}
+            links={links}
+            currentPage={currentPage}
+            handleToggle={toggle}
           />
-          ) : (
-            <DesktopNav currentPage={currentPage} links={links} />
-            )}
+        ) : (
+          <DesktopNav currentPage={currentPage} links={links} />
+        )}
         {!isMobile && <Socials />}
       </Container>
     </header>

@@ -7,7 +7,7 @@ const jobs: Job[] = [
     title: 'Institutional Monitor',
     company: 'UFCG',
     description:
-      "I helped students solidify the core concepts of Object-Oriented Programming with Java, Design Patters and Modeling (UML), through review sessions and online support. I also helped teachers in elaborating and assessing student assignments.",
+      'I helped students solidify the core concepts of Object-Oriented Programming with Java, Design Patters and Modeling (UML), through review sessions and online support. I also helped teachers in elaborating and assessing student assignments.',
     time: 'Jul 2023 - Current',
     current: true,
   },
