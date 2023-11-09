@@ -1,29 +1,41 @@
 import Link from 'next/link';
 
-import { Card, CardProps } from '@components/Card';
+import { use } from 'react';
 
-const projectList: CardProps[] = [
-  {
-    name: 'Test 1',
-    description: 'Sample description',
-    bannerSrc: '/banners/default-banner.jpg',
-    cardURL: 'https://github.com/dougdomingos/dougdomingos',
-    tags: ['Python', 'Java', 'C++'],
-  },
-];
+import Card from '@components/Card';
+import { Repository } from '@customTypes/Repository';
 
-const ProjectShowcase = () => (
-  <section>
-    <ul className='flex flex-wrap justify-center'>
-      {projectList.map((project) => (
-        <li key={project.name}>
-          <Link href={project.cardURL}>
-            <Card {...project} />
-          </Link>
-        </li>
-      ))}
-    </ul>
-  </section>
-);
+async function fetchRepositories(): Promise<Repository[]> {
+  const res = await fetch(process.env.GITHUB_REPOS, {
+    next: { revalidate: 24 * 60 * 60 },
+  });
+
+  const repositories = await res.json();
+
+  return repositories;
+}
+
+const ProjectShowcase = () => {
+  const repositories = use(fetchRepositories());
+
+  return (
+    <section>
+      <ul className='flex flex-wrap justify-center gap-4'>
+        {repositories.map((repo) => (
+          <li key={repo.name}>
+            <Link href={repo.html_url}>
+              <Card
+                name={repo.name}
+                description={repo.description}
+                bannerSrc={'/banners/default-banner.jpg'}
+                topics={repo.topics}
+              />
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </section>
+  );
+};
 
 export default ProjectShowcase;
