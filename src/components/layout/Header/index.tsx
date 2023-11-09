@@ -14,7 +14,6 @@ import Socials from './Socials';
 const links: NavigationLink[] = [
   { url: '/', label: 'Home' },
   { url: '/projects', label: 'Projects' },
-  { url: '/blog', label: 'Blog' },
 ];
 
 const Header = () => {
