@@ -10,9 +10,10 @@ async function fetchRepositories(): Promise<Repository[]> {
     next: { revalidate: 24 * 60 * 60 },
   });
 
-  const repositories = await res.json();
+  const repositories: Repository[] = await res.json();
 
-  return repositories;
+  // only returns repositories that have topics
+  return repositories.filter((repo) => repo.topics.length != 0);
 }
 
 const ProjectShowcase = () => {
