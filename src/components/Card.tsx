@@ -8,7 +8,7 @@ type CardProps = {
 };
 
 const Card = ({ name, description, banner, topics }: CardProps) => (
-  <article className='transition overflow-hidden duration-300 flex flex-col shadow-md rounded-md hover:shadow-lg hover:-translate-y-1 w-[300px]'>
+  <article className='transition overflow-hidden duration-300 flex flex-col shadow-md rounded-md hover:shadow-lg hover:-translate-y-1 w-[300px] bg-white-900'>
     {/* Card Image */}
     {banner && (
       <Image
