@@ -28,7 +28,6 @@ const ProjectShowcase = () => {
               <Card
                 name={repo.name}
                 description={repo.description}
-                bannerSrc={'/banners/default-banner.jpg'}
                 topics={repo.topics}
               />
             </Link>
