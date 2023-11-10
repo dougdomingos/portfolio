@@ -1,3 +1,5 @@
+import TopicTag from "./TopicTag";
+
 type CardProps = {
   name: string;
   description: string;
@@ -11,11 +13,7 @@ const Card = ({ name, description, topics }: CardProps) => (
       <p>{description}</p>
       <ul className='flex gap-2 flex-wrap'>
         {topics.map((tag) => (
-          <li
-            key={tag}
-            className='text-primary-dark rounded-full bg-primary-light py-1 px-3'>
-            <span className='text-sm font-bold'>{tag}</span>
-          </li>
+          <TopicTag key={tag} tag={tag} />
         ))}
       </ul>
     </div>

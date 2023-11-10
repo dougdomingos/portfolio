@@ -1,3 +1,4 @@
+import TopicTag from '@components/TopicTag';
 import { Post } from '@customTypes/Post';
 
 const posts: Post[] = [
@@ -40,7 +41,7 @@ const PostList = () => (
         <p>{post.description}</p>
         <ul className='flex gap-2'>
           {post.topics.map((topic) => (
-            <li key={topic}>&#x23;{topic}</li>
+            <TopicTag key={topic} tag={`#${topic}`} />
           ))}
         </ul>
       </article>
