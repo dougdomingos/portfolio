@@ -3,21 +3,10 @@ import Link from 'next/link';
 import { use } from 'react';
 
 import Card from '@components/Card';
-import { Repository } from '@customTypes/Repository';
-
-async function fetchRepositories(): Promise<Repository[]> {
-  const res = await fetch(process.env.GITHUB_REPOS, {
-    next: { revalidate: 24 * 60 * 60 },
-  });
-
-  const repositories: Repository[] = await res.json();
-
-  // only returns repositories that have topics
-  return repositories.filter((repo) => repo.topics.length != 0);
-}
+import { getPublicRepositories } from '@lib/getPublicRepositories';
 
 const ProjectShowcase = () => {
-  const repositories = use(fetchRepositories());
+  const repositories = use(getPublicRepositories());
 
   return (
     <section>
