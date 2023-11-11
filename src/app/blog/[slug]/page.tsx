@@ -1,5 +1,5 @@
-import components from '@components/MDX';
 import Container from '@components/layout/Container';
+import components from '@components/mdx/MDXBase';
 import { formatDate } from '@lib/formatDate';
 import { getPost } from '@lib/getPost';
 import fs from 'fs';

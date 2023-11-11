@@ -1,5 +1,7 @@
 import { MDXComponents } from 'mdx/types';
 
+import { InlineCode } from './Code';
+
 const components: MDXComponents = {
   p: ({ children }) => <p className='text-lg mb-3'>{children}</p>,
 
@@ -22,6 +24,8 @@ const components: MDXComponents = {
   ul: ({ children }) => (
     <ul className='list-disc pl-8 flex flex-col gap-2 mb-4'>{children}</ul>
   ),
+
+  InlineCode: InlineCode,
 };
 
 export default components;
