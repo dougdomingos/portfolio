@@ -19,8 +19,11 @@ const PostList = ({ searchTerm, posts }: PostListProps) => {
             : post.title.toLocaleLowerCase().includes(searchTerm.toLowerCase());
         })
         .map((post) => (
-          <Link key={post.slug} href={`/blog/${post.slug}`}>
-            <article className='flex flex-col max-w-sm gap-2 bg-white-900 p-4 shadow-md rounded-md'>
+          <Link
+            key={post.slug}
+            href={`/blog/${post.slug}`}
+            className='transition duration-300 hover:-translate-y-1 hover:shadow-lg shadow-md rounded-md overflow-hidden'>
+            <article className='flex flex-col max-w-sm gap-2 bg-white-900 p-4'>
               <span className='text-sm text-black italic'>
                 {formatDate(post.postDate, 'short')}
               </span>
