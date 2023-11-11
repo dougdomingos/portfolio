@@ -34,7 +34,7 @@ export default function PostPage({ params }: any) {
     <Container className='min-h-screen py-8'>
       <article className='w-full'>
         <div className='flex flex-col gap-2 mb-4'>
-          <h1 className='text-3xl font-display font-bold'>
+          <h1 className='text-4xl font-display font-bold'>
             {props.frontMatter.title}
           </h1>
           <span className='text-lg italic'>
