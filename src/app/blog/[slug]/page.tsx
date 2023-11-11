@@ -3,6 +3,7 @@ import components from '@components/mdx/MDXBase';
 import { formatDate } from '@lib/formatDate';
 import { getPost } from '@lib/getPost';
 import fs from 'fs';
+import { Metadata, ResolvedMetadata, ResolvingMetadata } from 'next';
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import path from 'path';
 import rehypeCodeTitles from 'rehype-code-titles';
@@ -25,6 +26,19 @@ export async function generateStaticParams() {
   }));
 
   return paths;
+}
+
+export async function generateMetadata({ params }: any): Promise<Metadata> {
+  const props = getPost(params.slug);
+
+  return {
+    title: props.frontMatter.title,
+    description: props.frontMatter.description,
+    keywords: props.frontMatter.topics,
+    authors: [
+      { name: 'Douglas Domingos', url: 'https://github.com/dougdomingos' },
+    ],
+  };
 }
 
 export default function PostPage({ params }: any) {
