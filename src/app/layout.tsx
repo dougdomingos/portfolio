@@ -1,11 +1,11 @@
 import { Inter, Poppins } from 'next/font/google';
 
-import Footer from '@components/layout/Footer';
 import Header from '@components/layout/Header';
 import clsx from 'clsx';
 import type { Metadata } from 'next';
 
 import './globals.css';
+import Wave from '@components/Wave';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 
@@ -29,10 +29,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body className={clsx(inter.variable, poppins.variable, 'font-sans')}>
+      <body className={clsx(inter.variable, poppins.variable, 'font-sans relative min-h-screen pb-28')}>
         <Header />
         <main className='relative flex justify-center px-4'>{children}</main>
-        <Footer />
+        <Wave className='absolute bottom-0 fill-primary max-h-32 w-full' />
       </body>
     </html>
   );
