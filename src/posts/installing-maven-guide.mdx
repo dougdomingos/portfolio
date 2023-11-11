@@ -31,7 +31,7 @@ use a HTTP repository in your projects, do the following:
 1. Open a terminal window in the folder where you saved the Maven binaries
 2. Open the `config/setting.xml` file
 3. Comment out the following section:
-   ```xml
+   ```xml:config/settings.xml
    <mirror>
      <id>maven-default-http-blocker</id>
      <mirrorOf>external:http:*</mirrorOf>
@@ -50,7 +50,7 @@ variable. For that, follow these steps:
    the output. Remember to pass the version of Maven you've downloaded in the
    command above
 2. Create the file `~/.mavenrc` and paste the following code:
-   ```bash
+   ```bash:.mavenrc
    export MAVEN_HOME=<realpath_output>
    export PATH=$MAVEN_HOME/bin:$PATH
    ```
@@ -64,7 +64,7 @@ As of now, every time you open a new terminal window, you would need to run
 
 1. Open your `~/.bashrc` file
 2. At the end of the file, paste the following code:
-   ```bash
+   ```bash:.bashrc
    if [ -f ~/.mavenrc ]; then
        . ~/.mavenrc
    fi

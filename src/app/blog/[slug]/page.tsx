@@ -4,12 +4,15 @@ import { getPost } from '@lib/getPost';
 import fs from 'fs';
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import path from 'path';
+import rehypeCodeTitles from 'rehype-code-titles';
+import rehypePrism from 'rehype-prism-plus';
 import remarkGfm from 'remark-gfm';
 
 // MDX configuration
 const options = {
   mdxOptions: {
     remarkPlugins: [remarkGfm],
+    rehypePlugins: [rehypeCodeTitles, rehypePrism],
   },
 };
 

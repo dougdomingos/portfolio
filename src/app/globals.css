@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('../styles/code-highlight.css');
+
 @layer components {
   .link-mobile-active {
     @apply border-l-[5px] border-primary bg-primary-light font-bold;
