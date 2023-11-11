@@ -1,4 +1,4 @@
-import TopicTag from "./TopicTag";
+import TopicTag from './TopicTag';
 
 type CardProps = {
   name: string;

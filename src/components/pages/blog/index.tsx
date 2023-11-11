@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import { useState } from 'react';
 
@@ -16,7 +16,7 @@ const Blog = ({ posts }: BlogProps) => {
 
   const handleSearch = (searchTerm: string) => {
     setSearch(searchTerm);
-  }
+  };
 
   return (
     <section className='flex flex-col items-center py-10 gap-6 min-h-[72.5vh]'>
