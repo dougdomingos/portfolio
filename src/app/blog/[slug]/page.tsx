@@ -1,3 +1,4 @@
+import components from '@components/MDX';
 import Container from '@components/layout/Container';
 import { formatDate } from '@lib/formatDate';
 import { getPost } from '@lib/getPost';
@@ -43,7 +44,11 @@ export default function PostPage({ params }: any) {
         </div>
         <hr className='border-2 border-primary-light' />
         <div className='py-4 text-lg'>
-          <MDXRemote source={props.content} options={options} />
+          <MDXRemote
+            source={props.content}
+            options={options}
+            components={components}
+          />
         </div>
       </article>
     </Container>
