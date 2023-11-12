@@ -32,7 +32,8 @@ const MobileNav = ({
               <li
                 key={link.label}
                 className={clsx(
-                  currentPage === link.url ? 'link-mobile-active' : '',
+                  currentPage === link.url &&
+                    'border-l-[5px] border-primary bg-primary-light font-bold',
                   'px-4 py-6 text-right text-2xl',
                 )}>
                 <Link onClick={handleToggle} href={link.url}>

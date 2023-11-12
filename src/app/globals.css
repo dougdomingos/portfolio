@@ -4,16 +4,6 @@
 
 @import url('../styles/code-highlight.css');
 
-@layer components {
-  .link-mobile-active {
-    @apply border-l-[5px] border-primary bg-primary-light font-bold;
-  }
-
-  .link-desktop-active {
-    @apply font-bold text-primary;
-  }
-}
-
 body {
   @apply bg-white font-sans text-black-900;
 }
