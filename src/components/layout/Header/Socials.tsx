@@ -7,6 +7,7 @@ const socials: Social[] = [
   {
     icon: <GithubLogo size={32} weight='fill' />,
     link: 'https://github.com/dougdomingos',
+    ariaLabel: 'Go to GitHub profile',
   },
   {
     icon: (
@@ -17,6 +18,7 @@ const socials: Social[] = [
       />
     ),
     link: 'https://linkedin.com/in/douglas-domingos',
+    ariaLabel: 'Go to Linkedin profile',
   },
 ];
 
@@ -27,7 +29,9 @@ const Socials = () => (
         <li
           key={social.link}
           className='transition-all hover:scale-125 ease-out'>
-          <Link href={social.link}>{social.icon}</Link>
+          <Link href={social.link} aria-label={social.ariaLabel}>
+            {social.icon}
+          </Link>
         </li>
       ))}
     </ul>
