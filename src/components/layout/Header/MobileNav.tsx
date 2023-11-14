@@ -34,9 +34,12 @@ const MobileNav = ({
                 className={clsx(
                   currentPage.startsWith(link.url) &&
                     'border-l-[5px] border-primary bg-primary-light font-bold',
-                  'px-4 py-6 text-right text-2xl',
+                  'text-right text-2xl',
                 )}>
-                <Link onClick={handleToggle} href={link.url}>
+                <Link
+                  onClick={handleToggle}
+                  href={link.url}
+                  className='inline-block w-full px-4 py-6'>
                   {link.label}
                 </Link>
               </li>
