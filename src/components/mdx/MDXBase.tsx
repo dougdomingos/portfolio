@@ -1,9 +1,17 @@
+import Link from 'next/link';
+
 import { MDXComponents } from 'mdx/types';
 
 import { InlineCode } from './Code';
 
 const components: MDXComponents = {
   p: ({ children }) => <p className='text-lg mb-3'>{children}</p>,
+
+  a: ({ children, href }) => (
+    <Link href={href!} className='text-primary-dark font-bold hover:underline'>
+      {children}
+    </Link>
+  ),
 
   h1: ({ children }) => (
     <h1 className='text-4xl font-bold font-display mb-2'>{children}</h1>
