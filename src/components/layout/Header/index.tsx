@@ -12,7 +12,7 @@ import MobileNav from './MobileNav';
 import Socials from './Socials';
 
 const links: NavigationLink[] = [
-  { url: '/', label: 'Home' },
+  { url: '/home', label: 'Home' },
   { url: '/projects', label: 'Projects' },
   { url: '/blog', label: 'Blog' },
 ];
