@@ -11,8 +11,7 @@ interface OverlayProps extends PropsWithChildren {
 }
 
 const Overlay = ({ visible, handleClose, children }: OverlayProps) => (
-  <menu
-    role='menu'
+  <aside
     className={clsx(
       visible ? 'w-full' : 'w-0',
       'fixed z-10 right-0 top-0 flex h-full flex-col justify-center overflow-hidden bg-white-900',
@@ -25,7 +24,7 @@ const Overlay = ({ visible, handleClose, children }: OverlayProps) => (
       className='absolute left-4 top-4'
     />
     {children}
-  </menu>
+  </aside>
 );
 
 export default Overlay;
