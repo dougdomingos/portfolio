@@ -15,7 +15,7 @@ const ToggleButton = ({
   <button
     aria-label={label}
     onClick={handleClick}
-    className={`${className} rounded-md p-1 active:bg-slate-300`}>
+    className={`${className} rounded-md p-1.5 active:bg-slate-300`}>
     {icon}
   </button>
 );
