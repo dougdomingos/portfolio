@@ -11,7 +11,7 @@ const DesktopNav = ({ links, currentPage }: Navigation) => {
           <li
             key={link.label}
             className={clsx(
-              currentPage === link.url &&
+              currentPage.startsWith(link.url) &&
                 'font-bold text-primary-dark bg-primary-light',
               'px-2 py-1 rounded-md hover:bg-primary-light',
             )}>
