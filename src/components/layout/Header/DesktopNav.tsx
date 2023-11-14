@@ -13,7 +13,7 @@ const DesktopNav = ({ links, currentPage }: Navigation) => {
             className={clsx(
               currentPage === link.url &&
                 'font-bold text-primary-dark bg-primary-light',
-              'px-2 py-1 rounded-md',
+              'px-2 py-1 rounded-md hover:bg-primary-light',
             )}>
             <Link href={link.url} className='uppercase'>
               {link.label}
