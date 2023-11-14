@@ -13,7 +13,7 @@ const DesktopNav = ({ links, currentPage }: Navigation) => {
             className={clsx(
               currentPage.startsWith(link.url) &&
                 'font-bold text-primary-dark bg-primary-light',
-              'rounded-md hover:bg-primary-light',
+              'rounded-md transition-colors duration-300 hover:bg-primary-light',
             )}>
             <Link href={link.url} className='px-3 py-1.5 uppercase inline-block'>
               {link.label}
