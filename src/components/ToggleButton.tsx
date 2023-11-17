@@ -1,5 +1,7 @@
 import { ComponentPropsWithoutRef } from 'react';
 
+import clsx from 'clsx';
+
 interface ToggleButtonProps extends ComponentPropsWithoutRef<'button'> {
   icon: React.ReactElement;
   label: string;
@@ -15,7 +17,10 @@ const ToggleButton = ({
   <button
     aria-label={label}
     onClick={handleClick}
-    className={`${className} rounded-md p-1.5 active:bg-slate-300`}>
+    className={clsx(
+      className,
+      'rounded-md p-1.5 active:bg-slate-300 dark:active:bg-black-dark',
+    )}>
     {icon}
   </button>
 );
