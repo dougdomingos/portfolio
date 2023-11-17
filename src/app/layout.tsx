@@ -1,11 +1,13 @@
+'use client';
+
 import { Inter, Poppins } from 'next/font/google';
 
+import Wave from '@components/Wave';
 import Header from '@components/layout/Header';
 import clsx from 'clsx';
-import type { Metadata } from 'next';
+import { ThemeProvider } from 'next-themes';
 
 import './globals.css';
-import Wave from '@components/Wave';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 
@@ -15,13 +17,6 @@ const poppins = Poppins({
   variable: '--font-poppins',
 });
 
-export const metadata: Metadata = {
-  title: 'Douglas Domingos | Portfolio',
-  description:
-    'Software Developer and Computer Science student at Federal University of Campina Grande (UFCG)',
-  keywords: ['portfolio', 'fullstack', 'developer', 'UFCG'],
-};
-
 export default function RootLayout({
   children,
 }: {
@@ -29,10 +24,17 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body className={clsx(inter.variable, poppins.variable, 'font-sans relative min-h-screen pb-28')}>
-        <Header />
-        <main className='relative flex justify-center px-4'>{children}</main>
-        <Wave className='absolute bottom-0 fill-primary max-h-32 w-full' />
+      <body
+        className={clsx(
+          inter.variable,
+          poppins.variable,
+          'font-sans relative min-h-screen pb-28',
+        )}>
+        <ThemeProvider attribute='class'>
+          <Header />
+          <main className='relative flex justify-center px-4'>{children}</main>
+          <Wave className='absolute bottom-0 fill-primary max-h-32 w-full' />
+        </ThemeProvider>
       </body>
     </html>
   );
