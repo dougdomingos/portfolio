@@ -46,12 +46,16 @@ const Header = () => {
         ) : (
           <DesktopNav currentPage={currentPage} links={links} />
         )}
-        {!isMobile && <Socials />}
-        <ToggleButton
-          icon={theme === 'light' ? <Moon /> : <Sun />}
-          label='Switch theme mode'
-          handleClick={handleThemeSwitch}
-        />
+        {!isMobile && (
+          <div className='flex gap-6 items-center'>
+            <Socials />
+            <ToggleButton
+              icon={theme === 'light' ? <Moon size={24} /> : <Sun size={24} />}
+              label='Switch theme mode'
+              handleClick={handleThemeSwitch}
+            />
+          </div>
+        )}
       </Container>
     </header>
   );
