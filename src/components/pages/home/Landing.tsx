@@ -1,5 +1,7 @@
 import Image from 'next/image';
 
+import clsx from 'clsx';
+
 const Landing = () => (
   <section className='flex flex-col lg:flex-row lg:justify-between gap-4 items-center'>
     <Image
@@ -7,7 +9,10 @@ const Landing = () => (
       alt='Profile picture'
       width={400}
       height={400}
-      className='rounded-full shadow-lg max-w-[200px] lg:w-full lg:max-w-[350px] h-auto lg:order-last'
+      className={clsx(
+        'rounded-full shadow-lg max-w-[200px] lg:w-full lg:max-w-[350px] h-auto lg:order-last',
+        'dark:shadow-none dark:ring-4 dark:ring-primary'
+      )}
     />
     <div className='flex flex-col gap-2 text-center lg:text-left'>
       <h1 className='font-display font-bold text-2xl lg:text-4xl'>
