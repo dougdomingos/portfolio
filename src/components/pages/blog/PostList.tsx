@@ -3,6 +3,7 @@ import Link from 'next/link';
 import TopicTag from '@components/TopicTag';
 import { PostMetadata } from '@customTypes/Post';
 import { formatDate } from '@lib/formatDate';
+import clsx from 'clsx';
 
 interface PostListProps {
   searchTerm: string;
@@ -22,9 +23,17 @@ const PostList = ({ searchTerm, posts }: PostListProps) => {
           <Link
             key={post.slug}
             href={`/blog/${post.slug}`}
-            className='transition duration-300 hover:-translate-y-1 hover:shadow-lg shadow-md rounded-md overflow-hidden'>
-            <article className='flex flex-col max-w-sm gap-2 bg-white-light p-4'>
-              <span className='text-sm text-black italic'>
+            className={clsx(
+              'shadow-md rounded-md overflow-hidden',
+              'hover:-translate-y-1 hover:shadow-lg duration-300 transition',
+              'dark:shadow-none dark:hover:ring-2 dark:hover:ring-primary',
+            )}>
+            <article
+              className={clsx(
+                'flex flex-col max-w-sm gap-2 bg-white-light p-4',
+                'dark:bg-black-light',
+              )}>
+              <span className='text-sm text-black dark:text-white-dark italic'>
                 {formatDate(post.postDate, 'short')}
               </span>
               <h2 className='text-lg font-bold font-display'>{post.title}</h2>
