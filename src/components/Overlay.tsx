@@ -4,9 +4,9 @@ import { PropsWithChildren } from 'react';
 
 import { Moon, Sun, X } from '@phosphor-icons/react';
 import clsx from 'clsx';
+import { useTheme } from 'next-themes';
 
 import ToggleButton from './ToggleButton';
-import { useTheme } from 'next-themes';
 
 interface OverlayProps extends PropsWithChildren {
   visible: boolean;
@@ -15,10 +15,10 @@ interface OverlayProps extends PropsWithChildren {
 
 const Overlay = ({ visible, handleClose, children }: OverlayProps) => {
   const { theme, setTheme } = useTheme();
-  
+
   const handleThemeSwitch = () => {
     setTheme(theme === 'light' ? 'dark' : 'light');
-  }
+  };
 
   return (
     <aside

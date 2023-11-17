@@ -10,7 +10,7 @@ const Searchbar = ({ handleSearch }: SearchbarProps) => (
     className={clsx(
       'overflow-hidden rounded-md bg-white-light flex w-full max-w-lg items-center shadow-md',
       'hover:ring-primary hover:ring-2 transition',
-      'dark:bg-black-light dark:shadow-none'
+      'dark:bg-black-light dark:shadow-none',
     )}>
     <MagnifyingGlass size={20} className='ml-4' />
     <input

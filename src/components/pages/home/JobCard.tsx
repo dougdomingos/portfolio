@@ -16,7 +16,7 @@ const JobCard = ({
         className={clsx(
           current ? 'bg-primary' : 'bg-black scale-90',
           'absolute top-1.5 -left-6 md:-left-8 ring-white ring-1 rounded-full w-4 h-4',
-          'dark:ring-black-light'
+          'dark:ring-black-light',
         )}
       />
       <span className='italic'>{time}</span>
