@@ -8,7 +8,7 @@ const components: MDXComponents = {
   p: ({ children }) => <p className='text-lg mb-3'>{children}</p>,
 
   a: ({ children, href }) => (
-    <Link href={href!} className='text-primary-dark font-bold hover:underline'>
+    <Link href={href!} className='text-primary-dark dark:text-primary font-bold hover:underline'>
       {children}
     </Link>
   ),

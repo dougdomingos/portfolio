@@ -3,7 +3,7 @@ import components from '@components/mdx/MDXBase';
 import { formatDate } from '@lib/formatDate';
 import { getPost } from '@lib/getPost';
 import fs from 'fs';
-import { Metadata, ResolvedMetadata, ResolvingMetadata } from 'next';
+import { Metadata } from 'next';
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import path from 'path';
 import rehypeCodeTitles from 'rehype-code-titles';
@@ -56,7 +56,7 @@ export default function PostPage({ params }: any) {
             Domingos
           </span>
         </div>
-        <hr className='border-2 border-primary-light' />
+        <hr className='border border-gray-300 dark:border-gray-700' />
         <div className='py-4 text-lg'>
           <MDXRemote
             source={props.content}
