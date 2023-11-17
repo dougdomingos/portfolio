@@ -12,10 +12,12 @@ const DesktopNav = ({ links, currentPage }: Navigation) => {
             key={link.label}
             className={clsx(
               currentPage.startsWith(link.url) &&
-                'font-bold text-primary-dark bg-primary-light',
-              'rounded-md transition-colors duration-300 hover:bg-primary-light',
+                'font-bold text-primary-dark bg-primary-light dark:text-primary-light dark:bg-primary-dark',
+              'rounded-md transition-colors duration-300 hover:bg-primary-light dark:hover:bg-primary-dark',
             )}>
-            <Link href={link.url} className='px-3 py-1.5 uppercase inline-block'>
+            <Link
+              href={link.url}
+              className='px-3 py-1.5 uppercase inline-block'>
               {link.label}
             </Link>
           </li>

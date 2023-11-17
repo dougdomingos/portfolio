@@ -33,7 +33,7 @@ const MobileNav = ({
                 key={link.label}
                 className={clsx(
                   currentPage.startsWith(link.url) &&
-                    'border-l-[5px] border-primary bg-primary-light font-bold',
+                    'border-l-[5px] border-primary bg-primary-light dark:bg-primary-dark font-bold',
                   'text-right text-2xl',
                 )}>
                 <Link
