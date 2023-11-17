@@ -1,13 +1,9 @@
-'use client';
-
 import { usePathname } from 'next/navigation';
 
-import ToggleButton from '@components/ToggleButton';
+import ThemeToggle from '@components/ThemeToggle';
 import { NavigationLink } from '@customTypes/Navigation';
 import useMediaQuery from '@hooks/useIsDesktop';
 import useToggle from '@hooks/useToggle';
-import { Moon, Sun } from '@phosphor-icons/react';
-import { useTheme } from 'next-themes';
 
 import Container from '../Container';
 import DesktopNav from './DesktopNav';
@@ -21,14 +17,9 @@ const links: NavigationLink[] = [
 ];
 
 const Header = () => {
-  const { theme, setTheme } = useTheme();
   const [showNav, toggle] = useToggle();
   const isMobile = useMediaQuery('(max-width: 768px)');
   const currentPage = usePathname()!;
-
-  const handleThemeSwitch = () => {
-    setTheme(theme === 'light' ? 'dark' : 'light');
-  };
 
   return (
     <header className='flex h-[70px] justify-center px-4'>
@@ -49,11 +40,7 @@ const Header = () => {
         {!isMobile && (
           <div className='flex gap-6 items-center'>
             <Socials />
-            <ToggleButton
-              icon={theme === 'light' ? <Sun size={24} /> : <Moon size={24} />}
-              label='Switch theme mode'
-              handleClick={handleThemeSwitch}
-            />
+            <ThemeToggle />
           </div>
         )}
       </Container>
