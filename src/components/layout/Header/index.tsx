@@ -50,7 +50,7 @@ const Header = () => {
           <div className='flex gap-6 items-center'>
             <Socials />
             <ToggleButton
-              icon={theme === 'light' ? <Moon size={24} /> : <Sun size={24} />}
+              icon={theme === 'light' ? <Sun size={24} /> : <Moon size={24} />}
               label='Switch theme mode'
               handleClick={handleThemeSwitch}
             />
