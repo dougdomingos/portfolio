@@ -5,5 +5,5 @@
 @import url('../styles/code-highlight.css');
 
 body {
-  @apply bg-white font-sans text-black-900 dark:bg-black dark:text-white-900;
+  @apply bg-white font-sans text-black dark:bg-black dark:text-white;
 }

@@ -5,7 +5,7 @@ interface SearchbarProps {
 }
 
 const Searchbar = ({ handleSearch }: SearchbarProps) => (
-  <div className='relative overflow-hidden rounded-md bg-white-900 transition hover:ring-primary hover:ring-2 flex w-full max-w-lg items-center shadow-md'>
+  <div className='relative overflow-hidden rounded-md bg-white-light transition hover:ring-primary hover:ring-2 flex w-full max-w-lg items-center shadow-md'>
     <MagnifyingGlass size={20} className='ml-4' />
     <input
       type='search'

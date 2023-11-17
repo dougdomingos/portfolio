@@ -15,13 +15,15 @@ const config: Config = {
 
       colors: {
         black: {
-          DEFAULT: '#1a1a1a',
-          900: '#080808',
+          light: '#232323',
+          DEFAULT: '#141414',
+          dark: '#080808',
         },
 
         white: {
+          light: '#ffffff',
           DEFAULT: '#fafafa',
-          900: '#ffffff',
+          dark: '#e1e1e1',
         },
 
         primary: {

@@ -14,7 +14,7 @@ const Overlay = ({ visible, handleClose, children }: OverlayProps) => (
   <aside
     className={clsx(
       visible ? 'w-full' : 'w-0',
-      'fixed z-10 right-0 top-0 flex h-full flex-col justify-center overflow-hidden bg-white-900',
+      'fixed z-10 right-0 top-0 flex h-full flex-col justify-center overflow-hidden bg-white-light',
       'transition-all duration-500 ease-in-out',
     )}>
     <ToggleButton
