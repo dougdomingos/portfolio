@@ -12,7 +12,7 @@ const Card = ({ name, description, topics }: CardProps) => (
   <article
     className={clsx(
       'overflow-hidden flex flex-col shadow-md rounded-md w-[300px] bg-white-light',
-      'hover:shadow-lg hover:-translate-y-1 transition duration-300 hover:ring-2 hover:ring-primary',
+      'hover:shadow-lg hover:-translate-y-1 transition-[transform,box-shadow] duration-300 hover:ring-2 hover:ring-primary',
       'dark:shadow-none dark:bg-black-light',
     )}>
     <div className='flex flex-col gap-2 p-4'>

@@ -20,7 +20,7 @@ const PostList = ({ searchTerm, posts }: PostListProps) => {
           className={clsx(
             'shadow-md rounded-md overflow-hidden',
             'dark:shadow-none hover:-translate-y-1 hover:shadow-lg hover:ring-2 hover:ring-primary',
-            'transition duration-300',
+            'transition-[transform,box-shadow] duration-300',
           )}>
           <Post {...post} />
         </Link>
