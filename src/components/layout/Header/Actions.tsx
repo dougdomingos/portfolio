@@ -1,7 +1,11 @@
 import Link from 'next/link';
 
+import { ComponentPropsWithoutRef } from 'react';
+
+import ThemeToggle from '@components/ThemeToggle';
 import { Social } from '@customTypes/Socials';
 import { GithubLogo, LinkedinLogo } from '@phosphor-icons/react';
+import clsx from 'clsx';
 
 const socials: Social[] = [
   {
@@ -22,9 +26,9 @@ const socials: Social[] = [
   },
 ];
 
-const Socials = () => (
-  <div>
-    <ul className='flex gap-4'>
+const Actions = ({ className }: ComponentPropsWithoutRef<'div'>) => (
+  <div className={clsx(className, 'flex items-center')}>
+    <ul className='inline-flex gap-4'>
       {socials.map((social) => (
         <li
           key={social.link}
@@ -34,8 +38,9 @@ const Socials = () => (
           </Link>
         </li>
       ))}
+      <ThemeToggle />
     </ul>
   </div>
 );
 
-export default Socials;
+export default Actions;

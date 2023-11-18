@@ -6,6 +6,7 @@ import clsx from 'clsx';
 
 import Overlay from '../../Overlay';
 import ToggleButton from '../../ToggleButton';
+import Actions from './Actions';
 
 interface MobileNavProps extends Navigation {
   visible: boolean;
@@ -46,6 +47,7 @@ const MobileNav = ({
             ))}
           </ul>
         </nav>
+        <Actions className='absolute w-full justify-center bottom-16' />
       </Overlay>
     </>
   );

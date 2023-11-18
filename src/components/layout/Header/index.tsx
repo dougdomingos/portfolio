@@ -6,9 +6,9 @@ import useMediaQuery from '@hooks/useIsDesktop';
 import useToggle from '@hooks/useToggle';
 
 import Container from '../Container';
+import Actions from './Actions';
 import DesktopNav from './DesktopNav';
 import MobileNav from './MobileNav';
-import Socials from './Socials';
 
 const links: NavigationLink[] = [
   { url: '/home', label: 'Home' },
@@ -36,12 +36,6 @@ const Header = () => {
           />
         ) : (
           <DesktopNav currentPage={currentPage} links={links} />
-        )}
-        {!isMobile && (
-          <div className='flex gap-6 items-center'>
-            <Socials />
-            <ThemeToggle />
-          </div>
         )}
       </Container>
     </header>

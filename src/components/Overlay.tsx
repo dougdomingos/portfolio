@@ -3,7 +3,6 @@ import { PropsWithChildren } from 'react';
 import { X } from '@phosphor-icons/react';
 import clsx from 'clsx';
 
-import ThemeToggle from './ThemeToggle';
 import ToggleButton from './ToggleButton';
 
 interface OverlayProps extends PropsWithChildren {
@@ -26,7 +25,6 @@ const Overlay = ({ visible, handleClose, children }: OverlayProps) => {
         handleClick={handleClose}
         className='absolute left-4 top-4'
       />
-      <ThemeToggle className='absolute left-4 top-16' />
       {children}
     </aside>
   );
