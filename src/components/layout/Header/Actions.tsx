@@ -38,7 +38,9 @@ const Actions = ({ className }: ComponentPropsWithoutRef<'div'>) => (
           </Link>
         </li>
       ))}
-      <ThemeToggle />
+      <li>
+        <ThemeToggle />
+      </li>
     </ul>
   </div>
 );
