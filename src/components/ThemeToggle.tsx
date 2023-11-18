@@ -1,10 +1,6 @@
 'use client';
 
-import {
-  ComponentPropsWithRef,
-  ComponentPropsWithoutRef,
-  useEffect,
-} from 'react';
+import { ComponentPropsWithoutRef } from 'react';
 
 import { Moon, Sun } from '@phosphor-icons/react';
 import { useTheme } from 'next-themes';
@@ -20,12 +16,19 @@ const ThemeToggle = ({ className }: ComponentPropsWithoutRef<'button'>) => {
 
   return (
     <ToggleButton
-      icon={theme === 'dark' ? <Moon size={24} /> : <Sun size={24} />}
+      icon={<ThemeToggleIcons />}
       label='Switch UI theme'
       handleClick={handleThemeSwitch}
       className={className}
     />
   );
 };
+
+const ThemeToggleIcons = () => (
+  <>
+    <Moon size={24} weight='fill' className='hidden dark:block' />
+    <Sun size={24} weight='light' className='block dark:hidden' />
+  </>
+);
 
 export default ThemeToggle;
