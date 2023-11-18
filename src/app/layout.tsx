@@ -30,7 +30,10 @@ export default function RootLayout({
           poppins.variable,
           'font-sans relative min-h-screen pb-28',
         )}>
-        <ThemeProvider attribute='class' enableSystem={false} defaultTheme='light'>
+        <ThemeProvider
+          attribute='class'
+          enableSystem={false}
+          defaultTheme='light'>
           <Header />
           <main className='relative flex justify-center px-4'>{children}</main>
           <Wave className='absolute bottom-0 fill-primary max-h-32 w-full' />
