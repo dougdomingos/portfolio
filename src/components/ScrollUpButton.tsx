@@ -23,7 +23,8 @@ const ScrollUpButton = () => {
         'transition-transform duration-300'
       )}
       onClick={handleScrollUp}
-      aria-label='Scroll to top'>
+      aria-label='Scroll to top'
+      disabled={scrollY === 0}>
       <CaretDoubleUp className='w-full h-auto md:group-hover:-translate-y-1 md:transition-transform' />
     </button>
   );
