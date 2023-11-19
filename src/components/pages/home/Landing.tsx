@@ -7,6 +7,7 @@ const Landing = () => (
     <Image
       src={'https://avatars.githubusercontent.com/u/95258393?v=4'}
       alt='Profile picture'
+      loading='eager'
       width={400}
       height={400}
       className={clsx(
