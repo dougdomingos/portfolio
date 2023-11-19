@@ -2,8 +2,10 @@
 
 import { Inter, Poppins } from 'next/font/google';
 
+import ScrollUpButton from '@components/ScrollUpButton';
 import Wave from '@components/Wave';
 import Header from '@components/layout/Header';
+import useScroll from '@hooks/useScroll';
 import clsx from 'clsx';
 import { ThemeProvider } from 'next-themes';
 
@@ -38,6 +40,7 @@ export default function RootLayout({
           <main className='relative flex justify-center px-4'>{children}</main>
           <Wave className='absolute bottom-0 fill-primary max-h-32 w-full' />
         </ThemeProvider>
+        <ScrollUpButton />
       </body>
     </html>
   );
