@@ -9,11 +9,12 @@ import path from 'path';
 import rehypeCodeTitles from 'rehype-code-titles';
 import rehypePrism from 'rehype-prism-plus';
 import remarkGfm from 'remark-gfm';
+import remarkEmoji from 'remark-emoji';
 
 // MDX configuration
 const options = {
   mdxOptions: {
-    remarkPlugins: [remarkGfm],
+    remarkPlugins: [remarkEmoji, remarkGfm],
     rehypePlugins: [rehypeCodeTitles, rehypePrism],
   },
 };
@@ -60,6 +61,7 @@ export default function PostPage({ params }: any) {
         <div className='py-4 text-lg'>
           <MDXRemote
             source={props.content}
+            // @ts-ignore
             options={options}
             components={components}
           />
