@@ -26,12 +26,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body
-        className={clsx(
-          inter.variable,
-          poppins.variable,
-          'font-sans relative min-h-screen pb-28',
-        )}>
+      <body className={clsx(inter.variable, poppins.variable)}>
         <ThemeProvider
           attribute='class'
           enableSystem={false}
