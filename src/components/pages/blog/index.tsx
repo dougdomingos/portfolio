@@ -19,7 +19,7 @@ const Blog = ({ posts }: BlogProps) => {
   };
 
   return (
-    <section className='flex flex-col items-center py-10 gap-6 min-h-[72.5vh]'>
+    <section className='flex flex-col items-center py-10 gap-6'>
       <Searchbar handleSearch={handleSearch} />
       <PostList searchTerm={search} posts={posts} />
     </section>
