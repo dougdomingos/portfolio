@@ -1,11 +1,14 @@
 'use client';
 
+import Link from 'next/link';
+
 import { useState } from 'react';
 
-import Searchbar from '@components/Searchbar';
+import PostPreview from '@components/pages/blog/PostPreview';
+import Searchbar from '@components/pages/blog/Searchbar';
 import { PostMetadata } from '@customTypes/Post';
-
-import PostList from './PostList';
+import { filterPosts } from '@lib/filterPosts';
+import clsx from 'clsx';
 
 interface BlogProps {
   posts: PostMetadata[];
@@ -21,7 +24,20 @@ const Blog = ({ posts }: BlogProps) => {
   return (
     <section className='flex flex-col items-center py-10 gap-6'>
       <Searchbar handleSearch={handleSearch} />
-      <PostList searchTerm={search} posts={posts} />
+      <div className='flex flex-wrap justify-center w-full gap-6'>
+        {filterPosts(posts, search).map((post) => (
+          <Link
+            key={post.slug}
+            href={`/blog/${post.slug}`}
+            className={clsx(
+              'shadow-md rounded-md overflow-hidden',
+              'dark:shadow-none hover:-translate-y-1 hover:shadow-lg hover:ring-2 hover:ring-primary',
+              'transition-[transform,box-shadow] duration-300',
+            )}>
+            <PostPreview {...post} />
+          </Link>
+        ))}
+      </div>
     </section>
   );
 };

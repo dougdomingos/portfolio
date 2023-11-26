@@ -2,9 +2,9 @@ import { PostMetadata } from '@customTypes/Post';
 import { formatDate } from '@lib/formatDate';
 import clsx from 'clsx';
 
-import TopicTag from './TopicTag';
+import TopicTag from '../../TopicTag';
 
-const Post = ({ title, description, postDate, topics }: PostMetadata) => (
+const PostPreview = ({ title, description, postDate, topics }: PostMetadata) => (
   <article
     className={clsx(
       'flex flex-col max-w-sm gap-2 bg-white-light p-4',
@@ -23,4 +23,4 @@ const Post = ({ title, description, postDate, topics }: PostMetadata) => (
   </article>
 );
 
-export default Post;
+export default PostPreview;
