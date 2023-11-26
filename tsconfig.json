@@ -19,6 +19,7 @@
       }
     ],
     "paths": {
+      "contentlayer/generated": ["./.contentlayer/generated"],  
       "@components/*": ["./src/components/*"],
       "@customTypes/*": ["./src/types/*"],
       "@hooks/*": ["./src/hooks/*"],
