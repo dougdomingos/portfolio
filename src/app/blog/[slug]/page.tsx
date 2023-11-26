@@ -29,16 +29,16 @@ export default function PostPage({ params }: { params: { slug: string } }) {
   return (
     <Container className='min-h-screen py-8'>
       <article className='w-full'>
-        <div className='flex flex-col gap-2 mb-4'>
+        <header className='flex flex-col gap-2 mb-4'>
           <h1 className='text-4xl font-display font-bold'>{post.title}</h1>
-          <span className='text-lg italic'>
-            {formatDate(new Date(post.postDate), 'long')} | Douglas Domingos
+          <span className='text-lg'>
+            Douglas Domingos - {formatDate(new Date(post.postDate), 'long')}
           </span>
-        </div>
-        <hr className='border border-gray-300 dark:border-gray-700' />
-        <div className='py-4 text-lg'>
+        </header>
+        <hr className='border dark:opacity-25' />
+        <main className='py-4'>
           <MDXContent />
-        </div>
+        </main>
       </article>
     </Container>
   );
