@@ -1,7 +1,7 @@
 import Container from '@components/layout/Container';
 import Blog from '@components/pages/blog';
-import { getPostsMetadata } from '@lib/getPostsMetadata';
 import pageMetadata from '@lib/pageMetadata';
+import { allPosts } from 'contentlayer/generated';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 };
 
 export default function BlogPage() {
-  const posts = getPostsMetadata();
+  const posts = allPosts;
 
   return (
     <Container>

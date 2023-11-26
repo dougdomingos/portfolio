@@ -1,14 +1,11 @@
-import { PostMetadata } from '@customTypes/Post';
+import { Post } from 'contentlayer/generated';
 
-export function filterPosts(
-  postList: PostMetadata[],
-  search: string,
-): PostMetadata[] {
+export function filterPosts(postList: Post[], search: string): Post[] {
   if (search === '') {
     return postList;
   }
 
-  const filteredPosts: PostMetadata[] = [];
+  const filteredPosts: Post[] = [];
 
   if (search.startsWith('#')) {
     postList.forEach((post) => {
