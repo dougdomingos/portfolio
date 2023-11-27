@@ -48,6 +48,7 @@ you need to use a HTTP repository in your projects, do the following:
 ## Exporting Maven into your $PATH
 
 To enable Maven anywhere in your system, you need to export it into your
+
 <InlineCode>$PATH</InlineCode> variable. For that, follow these steps:
 
 1. In your Maven installation folder, run <InlineCode>realpath
@@ -66,10 +67,11 @@ To enable Maven anywhere in your system, you need to export it into your
 ## Autoloading Maven
 
 As of now, every time you open a new terminal window, you would need to run
-`source ~/.mavenrc` to load Maven. To automatically load Maven, follow these
-steps:
 
-1. Open your `~/.bashrc` file
+<InlineCode>source ~/.mavenrc</InlineCode> to load Maven. To automatically load Maven,
+follow these steps:
+
+1. Open your <InlineCode>~/.bashrc</InlineCode> file
 2. At the end of the file, paste the following code:
    ```bash:.bashrc
    if [ -f ~/.mavenrc ]; then
@@ -77,5 +79,5 @@ steps:
    fi
    ```
 
-This will automatically load the Maven path variables into your `$PATH`
-everytime you start a new Bash section.
+This will automatically load the Maven path variables into your
+<InlineCode>$PATH</InlineCode> everytime you start a new Bash section.
