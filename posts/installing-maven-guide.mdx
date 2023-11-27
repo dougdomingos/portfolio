@@ -1,6 +1,7 @@
 ---
 title: 'How to easily install Maven in your Linux machine'
-description: A simple guide to installing Maven in any Ubuntu-based distribution.
+description:
+  A simple guide to installing Maven in any Ubuntu-based distribution.
 postDate: 11-10-2023
 topics: ['tutorial', 'maven', 'java']
 ---
@@ -14,24 +15,25 @@ But not to worry, because we will run through the whole process in details!
 
 ## Download the Maven binaries
 
-The [Apache Maven Project](https://maven.apache.org/download.cgi) offers the most
-recent versions of Maven for download in various formats. You can download the binaries
-(indicated by the <InlineCode>-bin</InlineCode> suffix) or the source codes
-(containing the <InlineCode>-src</InlineCode> suffix).
+The [Apache Maven Project](https://maven.apache.org/download.cgi) offers the
+most recent versions of Maven for download in various formats. You can download
+the binaries (indicated by the <InlineCode>-bin</InlineCode> suffix) or the
+source codes (containing the <InlineCode>-src</InlineCode> suffix).
 
-Since we want to install Maven for our personal use, we want to download
-the <InlineCode>-bin</InlineCode> versions. You can download either
-the <InlineCode>.tar.gz</InlineCode> or <InlineCode>.zip</InlineCode> file, whichever
+Since we want to install Maven for our personal use, we want to download the
+
+<InlineCode>-bin</InlineCode> versions. You can download either the
+<InlineCode>.tar.gz</InlineCode> or <InlineCode>.zip</InlineCode> file, whichever
 you prefer. Once the file is downloaded, extract its contents to a folder at the
 root of your user (e.g. <InlineCode>~/.mvn-binaries</InlineCode>).
 
 ## Disabling block for HTTP repositories
 
-Since version 3.8.1, **Maven blocks external HTTP repositories by default**. If you need to
-use a HTTP repository in your projects, do the following:
+Since version 3.8.1, **Maven blocks external HTTP repositories by default**. If
+you need to use a HTTP repository in your projects, do the following:
 
 1. Open a terminal window in the folder where you saved the Maven binaries
-2. Open the <InlineCode>config/setting.xml</InlineCode> file
+2. Open the <InlineCode>config/settings.xml</InlineCode> file
 3. Comment out the following section:
    ```xml:config/settings.xml
    <mirror>
@@ -45,27 +47,29 @@ use a HTTP repository in your projects, do the following:
 
 ## Exporting Maven into your $PATH
 
-To enable Maven anywhere in your system, you need to export it into
-your <InlineCode>$PATH</InlineCode> variable. For that, follow these steps:
+To enable Maven anywhere in your system, you need to export it into your
+<InlineCode>$PATH</InlineCode> variable. For that, follow these steps:
 
-1. In your Maven installation folder, run <InlineCode>realpath apache-maven-X.X.X</InlineCode>
-   and copy the output. Remember to pass the version of Maven you've downloaded in the
-   command above
-2. Create the file <InlineCode>~/.mavenrc</InlineCode> and paste the following code:
+1. In your Maven installation folder, run <InlineCode>realpath
+   apache-maven-X.X.X</InlineCode> and copy the output. Remember to replace the
+   version of Maven you've downloaded in the command above
+2. Create the file <InlineCode>~/.mavenrc</InlineCode> and paste the following
+   code:
    ```bash:.mavenrc
    export MAVEN_HOME=<realpath_output>
    export PATH=$MAVEN_HOME/bin:$PATH
    ```
 3. Run the command <InlineCode>source ~/.mavenrc</InlineCode>
-4. Run the command <InlineCode>mvn -version</InlineCode> to check the installation
+4. Run the command <InlineCode>mvn -version</InlineCode> to check the
+   installation
 
 ## Autoloading Maven
 
-As of now, every time you open a new terminal window, you would need to
-run <InlineCode>source ~/.mavenrc</InlineCode> to load Maven.
-To automatically load Maven, follow these steps:
+As of now, every time you open a new terminal window, you would need to run
+`source ~/.mavenrc` to load Maven. To automatically load Maven, follow these
+steps:
 
-1. Open your <InlineCode>~/.bashrc</InlineCode> file
+1. Open your `~/.bashrc` file
 2. At the end of the file, paste the following code:
    ```bash:.bashrc
    if [ -f ~/.mavenrc ]; then
@@ -73,5 +77,5 @@ To automatically load Maven, follow these steps:
    fi
    ```
 
-This will automatically load the Maven path variables into
-your <InlineCode>$PATH</InlineCode> everytime you start a new Bash section.
+This will automatically load the Maven path variables into your `$PATH`
+everytime you start a new Bash section.

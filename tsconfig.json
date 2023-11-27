@@ -20,6 +20,7 @@
     ],
     "paths": {
       "contentlayer/generated": ["./.contentlayer/generated"],  
+      "@styles/*": ["./src/styles/*"],
       "@components/*": ["./src/components/*"],
       "@customTypes/*": ["./src/types/*"],
       "@hooks/*": ["./src/hooks/*"],

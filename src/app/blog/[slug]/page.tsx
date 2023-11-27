@@ -1,4 +1,5 @@
 import Container from '@components/layout/Container';
+import { mdxComponents } from '@components/mdx/MDXComponents';
 import { formatDate } from '@lib/formatDate';
 import { allPosts } from 'contentlayer/generated';
 import { Metadata } from 'next';
@@ -37,7 +38,7 @@ export default function PostPage({ params }: { params: { slug: string } }) {
         </header>
         <hr className='border dark:opacity-25' />
         <main className='py-4'>
-          <MDXContent />
+          <MDXContent components={mdxComponents} />
         </main>
       </article>
     </Container>

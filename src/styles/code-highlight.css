@@ -4,8 +4,7 @@ code[class*='language-'],
   color: #d4d4d4;
   font-size: 16px;
   text-shadow: none;
-  font-family: Menlo, Monaco, Consolas, 'Andale Mono', 'Ubuntu Mono',
-    'Courier New', monospace;
+  font-family: var(--font-roboto-mono);
   direction: ltr;
   text-align: left;
   white-space: pre;
@@ -38,9 +37,10 @@ code[class*='language-'] *::selection {
 
 pre[class*='language-'] {
   padding: 1em;
-  margin: 0.5em 0;
+  margin: 16px 0;
   overflow: auto;
-  background: #1e1e1e;
+  
+  @apply bg-black-light
 }
 
 :not(pre) > code[class*='language-'] {
@@ -278,12 +278,13 @@ pre[class*='language-'] > code[class*='language-'] {
 
 .rehype-code-title {
   margin-top: 1rem;
-  background-color: #101010;
   padding: 16px;
   font-weight: bold;
   font-size: 16px;
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
+
+  @apply bg-black;
 }
 
 .rehype-code-title + pre[class*='language-'] {

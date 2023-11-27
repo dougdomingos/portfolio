@@ -11,6 +11,7 @@ const config: Config = {
       fontFamily: {
         display: ['var(--font-poppins)'],
         sans: ['var(--font-inter)'],
+        mono: ['var(--font-roboto-mono)']
       },
 
       colors: {

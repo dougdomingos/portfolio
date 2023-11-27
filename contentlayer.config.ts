@@ -1,4 +1,9 @@
 import { defineDocumentType, makeSource } from 'contentlayer/source-files';
+import rehypeCodeTitles from 'rehype-code-titles';
+import rehypePrism from 'rehype-prism-plus';
+import remarkGfm from 'remark-gfm';
+import remarkEmoji from 'remark-emoji';
+import { Pluggable } from 'unified';
 
 export const Post = defineDocumentType(() => ({
   name: 'Post',
@@ -20,4 +25,11 @@ export const Post = defineDocumentType(() => ({
   },
 }));
 
-export default makeSource({ contentDirPath: 'posts', documentTypes: [Post] });
+export default makeSource({
+  contentDirPath: 'posts',
+  documentTypes: [Post],
+  mdx: {
+    remarkPlugins: [remarkGfm, remarkEmoji] as Pluggable[],
+    rehypePlugins: [rehypeCodeTitles, rehypePrism] as Pluggable[],
+  },
+});

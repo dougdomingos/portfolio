@@ -1,11 +1,10 @@
 'use client';
 
-import { Inter, Poppins } from 'next/font/google';
+import { Inter, Poppins, Roboto_Mono } from 'next/font/google';
 
 import ScrollUpButton from '@components/ScrollUpButton';
 import Wave from '@components/Wave';
 import Header from '@components/layout/Header';
-import useScroll from '@hooks/useScroll';
 import clsx from 'clsx';
 import { ThemeProvider } from 'next-themes';
 
@@ -19,6 +18,12 @@ const poppins = Poppins({
   variable: '--font-poppins',
 });
 
+const robotoMono = Roboto_Mono({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+  variable: '--font-roboto-mono',
+});
+
 export default function RootLayout({
   children,
 }: {
@@ -26,7 +31,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body className={clsx(inter.variable, poppins.variable)}>
+      <body
+        className={clsx(inter.variable, poppins.variable, robotoMono.variable)}>
         <ThemeProvider
           attribute='class'
           enableSystem={false}
