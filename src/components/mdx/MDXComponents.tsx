@@ -3,7 +3,6 @@ import Link from 'next/link';
 import type { MDXComponents } from 'mdx/types';
 
 import CodeBlock from './CodeBlock';
-import {InlineCode} from './InlineCode';
 
 export const mdxComponents: MDXComponents = {
   h1: ({ children }) => (
@@ -32,9 +31,7 @@ export const mdxComponents: MDXComponents = {
 
   ul: ({ children }) => <ul className='list-disc pl-6'>{children}</ul>,
 
-  li: ({ children }) => <li className='mb-2'>{children}</li>,
+  li: ({ children }) => <li className='mb-2 text-lg'>{children}</li>,
 
   pre: CodeBlock,
-
-  InlineCode: InlineCode,
 };

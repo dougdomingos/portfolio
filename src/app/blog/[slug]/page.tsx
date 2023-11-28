@@ -1,6 +1,7 @@
 import Container from '@components/layout/Container';
 import { mdxComponents } from '@components/mdx/MDXComponents';
 import { formatDate } from '@lib/formatDate';
+import '@styles/code-highlight.css';
 import { allPosts } from 'contentlayer/generated';
 import { Metadata } from 'next';
 import { useMDXComponent } from 'next-contentlayer/hooks';

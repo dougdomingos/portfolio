@@ -7,3 +7,7 @@
 body {
   @apply relative min-h-screen bg-white pb-28 font-sans text-black dark:bg-black dark:text-white;
 }
+
+code {
+  @apply font-mono p-1 rounded-md bg-gray-300 dark:bg-gray-700
+}

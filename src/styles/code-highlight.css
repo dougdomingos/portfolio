@@ -1,3 +1,8 @@
+code[class*='language-'] {
+  padding: 0;
+  background: transparent;
+}
+
 pre[class*='language-'],
 code[class*='language-'],
 .rehype-code-title {
@@ -284,7 +289,7 @@ pre[class*='language-'] > code[class*='language-'] {
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
 
-  @apply bg-black;
+  @apply bg-black-light border-b-[1px] border-b-gray-600;
 }
 
 .rehype-code-title + pre[class*='language-'] {
