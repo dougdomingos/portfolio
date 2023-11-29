@@ -1,12 +1,10 @@
 import { usePathname } from 'next/navigation';
 
-import ThemeToggle from '@components/ThemeToggle';
 import { NavigationLink } from '@customTypes/Navigation';
 import useMediaQuery from '@hooks/useIsDesktop';
 import useToggle from '@hooks/useToggle';
 
 import Container from '../Container';
-import Actions from './Actions';
 import DesktopNav from './DesktopNav';
 import MobileNav from './MobileNav';
 
