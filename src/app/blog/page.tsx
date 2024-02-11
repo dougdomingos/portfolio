@@ -10,7 +10,9 @@ export const metadata: Metadata = {
 };
 
 export default function BlogPage() {
-  const posts = allPosts;
+  const posts = allPosts.sort((p1, p2) =>
+    p1.postDate <= p2.postDate ? 1 : -1,
+  );
 
   return (
     <Container>
