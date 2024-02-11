@@ -1,5 +1,6 @@
 import Link from 'next/link';
 
+import clsx from 'clsx';
 import type { MDXComponents } from 'mdx/types';
 
 import CodeBlock from './CodeBlock';
@@ -27,9 +28,21 @@ export const mdxComponents: MDXComponents = {
     </Link>
   ),
 
-  ol: ({ children }) => <ol className='list-decimal pl-6'>{children}</ol>,
+  img: ({ src, alt }) => (
+    <img
+      src={src}
+      alt={alt}
+      className='max-w-[600px] mx-auto mb-[1.8em] shadow-xl dark:shadow-none rounded-lg'
+    />
+  ),
 
-  ul: ({ children }) => <ul className='list-disc pl-6'>{children}</ul>,
+  ol: ({ children }) => (
+    <ol className='list-decimal pl-6 mb-[1.25em]'>{children}</ol>
+  ),
+
+  ul: ({ children }) => (
+    <ul className='list-disc pl-6 mb-[1.25em]'>{children}</ul>
+  ),
 
   li: ({ children }) => <li className='mb-2 text-lg'>{children}</li>,
 
