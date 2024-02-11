@@ -10,16 +10,15 @@ const JobCard = ({
   company,
   description,
 }: JobCardProps) => {
-  const timeSpan = 
+  const timeSpan =
     `${formatDate(time.start, 'long')} - ${time.end ? formatDate(time.end, 'long') : 'Current'}`;
 
   return (
     <div className='relative ml-4 md:ml-6'>
       <div
         className={clsx(
-          time.end ? 'bg-black' : 'bg-primary scale-125',
-          'absolute top-1.5 -left-6 md:-left-8 ring-white ring-1 rounded-full w-4 h-4',
-          'dark:ring-black-light',
+          time.end ? 'bg-primary-dark' : 'bg-primary scale-125',
+          'absolute top-1.5 -left-6 md:-left-8 rounded-full w-4 h-4',
         )}
       />
       <span className='italic'>{timeSpan}</span>
