@@ -32,7 +32,7 @@ export const mdxComponents: MDXComponents = {
     <img
       src={src}
       alt={alt}
-      className='max-w-[600px] mx-auto mb-[1.8em] shadow-xl dark:shadow-none rounded-lg'
+      className='w-full max-w-[600px] mx-auto mb-[1.8em] shadow-xl dark:shadow-none rounded-lg'
     />
   ),
 
