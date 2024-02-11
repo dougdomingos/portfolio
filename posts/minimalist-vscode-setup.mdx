@@ -1,0 +1,122 @@
+---
+title: 'My minimalist VSCode theme'
+description:
+  'Learn how to configure your VSCode and give it an awesome minimalist design'
+postDate: 02-11-2024
+topics: ['vscode', 'theme', 'tutorial']
+---
+
+How many hours have you spent in front of your screen, trying to solve that one
+tricky bug? Probably more than you can count, right? For that reason, it's
+important to have a setup that is comfortable for the eyes. But depending on how
+picky you are about themes, configuring your code editor might take quite a
+while.
+
+Here, I'm going to show you how to set up a minimalist theme for VSCode that
+I've been using recently, going from fonts and icon themes to Code's
+configurations and extensions. So hop on and let's go :rocket:
+
+## Themes and Icons
+
+You've probably already spended a dozen of hours scrolling through Code's
+(almost) infinite list of theme extensions, trying one after the another, and
+later removing them because "they don't feel right". I do this myself from time
+to time. Check out some of my favorites:
+
+- [Min Theme (Miguel Solorio)](https://marketplace.visualstudio.com/items?itemName=miguelsolorio.min-theme):
+  This is the theme I'm currently using. The color palette is very pleasing,
+  modern and really gives of a minimalist vibe (at least for me :laughing:)
+- [Omni Theme (Rocketseat)](https://github.com/getomni/visual-studio-code): If
+  you enjoy the color palette of the Dracula theme, you're gonna love this one.
+  Has a great contrast and colorful syntax highlighting
+- [Ayu Themes (teabyii)](https://vscodethemes.com/e/teabyii.ayu/ayu-dark): This
+  collection of themes reminds the palette of the IntelliJ IDE, with a great
+  contrast that is pleasing to the eye
+- [GitHub Themes (GitHub)](https://marketplace.visualstudio.com/items?itemName=GitHub.github-vscode-theme):
+  Classics that work well. The color palette is not very vibrant and the
+  constrast is very good. It's the basic that works like a charm
+
+As for icon themes, there are three extensions that I personally love:
+
+- [Symbols (Miguel Solorio)](https://marketplace.visualstudio.com/items?itemName=miguelsolorio.symbols):
+  A great combo with the _Min Theme_. Simple, clean and elegant.
+- [VSCode Icons (VSCode Icons Theme)](https://marketplace.visualstudio.com/items?itemName=vscode-icons-team.vscode-icons):
+  Expressive is the best word for describing this one. If you enjoy richness of
+  details, this might be the one for you
+- [Material Icon Theme (Philipp Kief)](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme):
+  Very similar to the previous one, but with the flat design approach. Feels
+  like a combination of Symbols' and VSCode Icons' designs
+
+## Fonts
+
+The fonts of your editor have a greater impact on the design than the color
+palette of your themes, so it's very important to choose a font that goes along
+with the style of your Code setup.
+
+If you work with JavaScript/TypeScript, I'd recommend fonts that have support
+ligatures ("combining" various characters into one symbol). There are three
+fonts that I recommend trying out:
+
+- [Cascadia Code](https://github.com/microsoft/cascadia-code): This font by
+  Microsoft is simply beautiful. You'll find it hard to encounter a setup that
+  makes this seem bad. It has a rich support to font ligatures and cursive
+  characters for italic styles.
+- [JetBrains Mono](https://www.jetbrains.com/pt-br/lp/mono/): If you enjoy the
+  IntelliJ workspace style, this is for you. Characters are easy to read, also
+  has great support for font ligatures, and has a elegant, modern touch
+- [Geist Mono](https://vercel.com/font/mono): This is a new monospaced font by
+  Vercel that looks gourgeous. Modern, easy to read and gives off a minimalist
+  feel to your workspace
+
+## VSCode configurations
+
+Now we're gonna dive into Code's visual customization. VSCode allows us to tweak
+quite a lot with its layout design, which gives us power to make the editor look
+clean and elegant.
+
+Please note that the following changes are applied globally. If you wish to
+scope this configuration to a certain workspace, I recommend doing it with
+**Profiles**.
+
+First, open up your `settings.json` file (using `Ctrl + Shift + P` and typing
+`"User Settings"`). If you wish, remove all previous configurations. Assuming
+you've cleared all the settings, you should have this screen:
+
+![Settings.json file](/images/posts/settings-start.png)
+
+Now, let's get to the configurations. First, let's tweak with the editor's
+functionalities. Here, you will:
+
+- Enable autosave for files
+- Set up tab and text size, font family and line height
+- Add rulers to mark line lengths
+- Configure start up window (optional)
+- Enable multi-cursor modifier (optional)
+
+Here are the settings I use:
+
+![Functionality configs](/images/posts/settings-functionality.png)
+
+Now the fun part: let's change the layout of VSCode. We're going to remove some
+things:
+
+- File breadcrumbs
+- File minimap
+- Status bar
+- Scrollbars
+- File paths on labels
+- Semantic highlighting
+
+Also, we're adding line highlighting with gutter included (the line number
+part). Checkout how to do it:
+
+![Layout configs](/images/posts/settings-layout.png)
+
+## The result
+
+After all that, you're ready to go! The final result depends on the themes and
+fonts you're using, but I can give you an example on how it looks. I'm using the
+**Min Theme and Symbols for theme and icons**. As for fonts, I'm using **Geist
+Sans for the editor and Geist Mono for code files and terminal windows**.
+
+![](/images/posts/settings-result.png)
