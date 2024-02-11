@@ -1,7 +1,7 @@
 import { use } from 'react';
 
-import Card from '@components/Card';
 import { getPublicRepositories } from '@lib/getPublicRepositories';
+import RepoPreview from './RepoPreview';
 
 const ProjectShowcase = () => {
   const repositories = use(getPublicRepositories());
@@ -11,7 +11,7 @@ const ProjectShowcase = () => {
       <ul className='flex flex-wrap justify-center gap-4'>
         {repositories.map((repo) => (
           <li key={repo.name}>
-            <Card {...repo} />
+            <RepoPreview {...repo} />
           </li>
         ))}
       </ul>

@@ -1,13 +1,10 @@
-'use client';
-
 import Link from 'next/link';
 
+import TopicTag from '@components/TopicTag';
 import { Repository } from '@customTypes/Repository';
 import clsx from 'clsx';
 
-import TopicTag from './TopicTag';
-
-const Card = ({ name, description, topics, html_url }: Repository) => {
+const RepoPreview = ({ name, description, topics, html_url }: Repository) => {
   return (
     <Link href={html_url} target='_blank'>
       <article
@@ -30,4 +27,4 @@ const Card = ({ name, description, topics, html_url }: Repository) => {
   );
 };
 
-export default Card;
+export default RepoPreview;
