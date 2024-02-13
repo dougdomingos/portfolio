@@ -1,19 +1,14 @@
 import Link from 'next/link';
 
+import Card from '@components/Card';
 import TopicTag from '@components/TopicTag';
 import { Repository } from '@customTypes/Repository';
-import clsx from 'clsx';
 
 const RepoPreview = ({ name, description, topics, html_url }: Repository) => {
   return (
     <Link href={html_url} target='_blank'>
-      <article
-        className={clsx(
-          'overflow-hidden flex flex-col shadow-md rounded-md w-[300px] bg-white-light',
-          'hover:shadow-lg hover:-translate-y-1 transition-[transform,box-shadow] duration-300 hover:ring-2 hover:ring-primary',
-          'dark:shadow-none dark:bg-black-light',
-        )}>
-        <div className='flex flex-col gap-2 p-4'>
+      <Card className='w-[300px]'>
+        <div className='flex flex-col gap-2'>
           <h2 className='text-lg font-display font-bold'>{name}</h2>
           <p className='h-full'>{description}</p>
           <ul className='flex gap-2 flex-wrap'>
@@ -22,7 +17,7 @@ const RepoPreview = ({ name, description, topics, html_url }: Repository) => {
             ))}
           </ul>
         </div>
-      </article>
+      </Card>
     </Link>
   );
 };

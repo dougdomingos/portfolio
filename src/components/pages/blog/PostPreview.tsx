@@ -1,7 +1,7 @@
 import { useRouter } from 'next/navigation';
 
+import Card from '@components/Card';
 import { formatDate } from '@lib/formatDate';
-import clsx from 'clsx';
 import { Post } from 'contentlayer/generated';
 
 import TopicTag from '../../TopicTag';
@@ -14,14 +14,9 @@ const PostPreview = (post: Post) => {
   };
 
   return (
-    <article
+    <Card
       onClick={handlePostClick}
-      className={clsx(
-        'flex flex-col max-w-sm gap-2 bg-white-light p-4 shadow-md rounded-md overflow-hidden',
-        'hover:-translate-y-1 hover:shadow-lg hover:ring-2 hover:ring-primary',
-        'transition-[transform,box-shadow] duration-300',
-        'dark:bg-black-light dark:shadow-none',
-      )}>
+      className='max-w-sm gap-2 cursor-pointer'>
       <span className='text-sm text-black dark:text-white-dark italic'>
         {formatDate(new Date(post.postDate), 'short')}
       </span>
@@ -32,7 +27,7 @@ const PostPreview = (post: Post) => {
           <TopicTag key={topic} tag={`#${topic}`} />
         ))}
       </ul>
-    </article>
+    </Card>
   );
 };
 
