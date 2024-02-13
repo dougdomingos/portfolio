@@ -14,9 +14,7 @@ const PostPreview = (post: Post) => {
   };
 
   return (
-    <Card
-      onClick={handlePostClick}
-      className='max-w-sm gap-2 cursor-pointer'>
+    <Card onClick={handlePostClick} className='max-w-sm gap-2 cursor-pointer'>
       <span className='text-sm text-black dark:text-white-dark italic'>
         {formatDate(new Date(post.postDate), 'short')}
       </span>
@@ -24,7 +22,7 @@ const PostPreview = (post: Post) => {
       <p className='h-full'>{post.description}</p>
       <ul className='flex gap-2'>
         {post.topics.map((topic) => (
-          <TopicTag key={topic} tag={`#${topic}`} />
+          <TopicTag key={topic} tag={topic} />
         ))}
       </ul>
     </Card>
